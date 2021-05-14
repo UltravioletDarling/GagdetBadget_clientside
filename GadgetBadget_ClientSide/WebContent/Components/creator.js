@@ -72,12 +72,12 @@ function onCreatorSaveComplete(response, status){
 $(document).on("click", ".btnUpdate", function(event) 
 		{     
 	$("#creatoridsave").val($(this).closest("tr").find('#hidcreatoridUpdate').val());     
-	$("#name").val($(this).closest("tr").find('td:eq(0)').text());    
-	$("#address").val($(this).closest("tr").find('td:eq(1)').text());     
-	$("#number").val($(this).closest("tr").find('td:eq(2)').text());     
+	$("#fullname").val($(this).closest("tr").find('td:eq(0)').text());    
+	$("#city").val($(this).closest("tr").find('td:eq(1)').text());     
+	$("#contactnum").val($(this).closest("tr").find('td:eq(2)').text());     
 	$("#email").val($(this).closest("tr").find('td:eq(3)').text()); 
 	$("#fieldofinterest").val($(this).closest("tr").find('td:eq(4)').text()); 
-	$("#budget").val($(this).closest("tr").find('td:eq(5)').text()); 
+	$("#currentbudget").val($(this).closest("tr").find('td:eq(5)').text()); 
 
 });
 
@@ -87,7 +87,7 @@ $(document).on("click", ".btnRemove", function(event){
 	{
 		url : "CreatorServlet",
 		type : "DELETE",
-		data : "creatorid=" + $(this).data("creatorID"),
+		data : "creatorid=" + $(this).data("creatorid"),
 		dataType : "text",
 		complete : function(response, status)
 		{
