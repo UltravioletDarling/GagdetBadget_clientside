@@ -61,7 +61,7 @@ public class Creator_IT19234526 {
 				output += "<td>" + budget + "</td>";
 
 				output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"
-						+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-appID='"
+						+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-creatorid='"
 						+ creatorid + "'>" + "</td></tr>";
 
 			}
