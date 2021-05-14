@@ -9,7 +9,8 @@ $(document).ready(function()
 
 ///SAVE ============================================ 
 $(document).on("click", "#btnSave", function(event) 
-{  
+{   
+
 	// Clear alerts---------------------  
 	$("#alertSuccess").text("");  
 	$("#alertSuccess").hide();  
@@ -125,32 +126,29 @@ function onCreatorDeletedComplete(response, status)
 // CLIENT-MODEL================================================================
 function validateCreatorform()
 {
-	// CODE
-	if ($("#name").val().trim() == "")
+
+	if ($("#fullname").val().trim() == "")
 	{
 	return "Insert The Researcher Name.";
 	}
 	// NAME
-	if ($("#address").val().trim() == "")
+	if ($("#city").val().trim() == "")
 	{
 	return "Insert Address.";
 }
 
-// PRICE-------------------------------
-if ($("#number").val().trim() == ""){
+if ($("#contactnum").val().trim() == ""){
 	return "Insert Contact Number.";
 }
 		// is numerical value
-		var tpnum = $("#number").val().trim();
+		var tpnum = $("#contactnum").val().trim();
 		if (!$.isNumeric(tpnum))
 	{
 	return "Only Numerical Values Are Allowed";
 	}
 		
-// convert to decimal price
-$("#number").val(parseFloat(tpnum).toFixed(2));
 
-// DESCRIPTION------------------------
+
 if ($("#email").val().trim() == ""){
 	
 	return "Insert Email";
@@ -160,7 +158,7 @@ if ($("#fieldofinterest").val().trim() == ""){
 	
 	return "Insert Field Of Interest";
 }
-if ($("#budget").val().trim() == ""){
+if ($("#currentbudget").val().trim() == ""){
 	
 	return "Insert Budget";
 }

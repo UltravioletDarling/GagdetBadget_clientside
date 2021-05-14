@@ -88,7 +88,7 @@ public class CreatorServlet extends HttpServlet {
 		 		param.get("city").toString(),        
 		 		param.get("contactnum").toString().toString().replace("%40", "@"),        
 		 		param.get("email").toString(),
-		 		param.get("fieldofinterst").toString().toString().replace("+", " "), 
+		 		param.get("fieldofinterest").toString().toString().replace("+", " "), 
 		 		param.get("currentbudget").toString().toString().replace("+", " "));
 		
 		response.getWriter().write(result);
